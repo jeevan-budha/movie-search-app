@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+
+nav{
+    background: #232f3e;
+    color:#fff;
+}
+
+.div-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 18px;
+}
+
+.search-container input, button{
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-container input{
+    border-radius: 3px 0 0 3px;
+}
+.search-container button{
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    background-color: #f5c518;
+    transition: all 0.2s;
+}
+.search-container button:hover{
+    background: #ffdd45;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-block:38px;
+}
+
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 72vh;
+}
+
+
+.movie-container{
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.movie-container.noBackground{
+    background: none;
+    box-shadow: none;
+    align-items: center;
+}
+.movie-poster{
+   height: 450px;
+   margin-right:30px;
+   border-radius: 5px 0 0 5px; 
+}
+
+.movie-info{
+    padding-inline: 15px;
+
+}
+
+.movie-info h2{
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0 12px 0;
+}
+.movie-info h2+p{
+    text-align: center;
+}
+
+.movie-info .movie-genre{
+    display: flex;
+    justify-content: center;
+    margin-block: 5px;
+    overflow: auto;
+}
+.movie-info .movie-genre p{
+    background: #232f3e;
+    color: #fff;
+    padding:5px 14px;
+    margin-inline: 5px;
+    border: 2px sloi #000000;
+    font-weight: 700;
+    border-radius: 6px;
+
+}
+
+.movie-info p{
+    font-size: 18px;
+    margin-block: 16px;
+    line-height:24px;
+}
+footer{
+    text-align: center;
+    background: #232f3e;
+    color: #fff;
+    padding-block:20px;
+    margin-top:40px;
+    font-size: 20px;
+}
+
+.loaderdiv{
+    height: 100px;
+    width:100px;
+   border: 5px solid;
+   border-top-color: #000000;
+   border-bottom-color: aqua;
+   border-radius: 50%;
+   animation:loader 2s ease-in-out infinite;
+   /* transition: all 3s ease-in-out 0.2s ; */
+   /* transform: rotate(360deg); */
+}
+
+@keyframes loader{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width:950px) {
+    .movie-container{
+        flex-direction: column;
+    }
+    .movie-poster{
+        width: 100%;
+        height: fit-content;
+    } 
+    .movie-poster img{
+        width: 100%;
+        height: fit-content;
+        margin-right: 0;
+    }
+
+    .movie-info{
+        padding-inline: 30px;
+    }
+    
+}
+
+@media screen and (max-width:630px) {
+    .div-navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .search-container{
+        margin-top: 12px;
+    }
+}
