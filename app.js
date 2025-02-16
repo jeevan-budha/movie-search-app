@@ -19,7 +19,7 @@ async function getmovieInfo(movie){
         showMovieData(data);
 
     }catch(error){
-        showErrorMessage("No Movie Found !!!!");
+        showErrorMessage("Oops No Movie Found try another movie!!!!");
     }
    
 }
@@ -64,14 +64,17 @@ function handleFormSubmission(e){
     e.preventDefault();
     const movieName =inputBox.value.trim();
     if(movieName !==""){
+        movieContainer.innerHTML ="";
+        movieContainer.classList.add('noBackground');
         const loader =document.createElement('div');
         loader.classList.add('loaderdiv');
         movieContainer.appendChild(loader)
         // showErrorMessage("Fetching Movie Information .....")
         getmovieInfo(movieName);
+        // inputBox.value="";
     }
     else{
-        showErrorMessage();
+        showErrorMessage("Sorry we cannot enter the any text");
     }
 }
 
