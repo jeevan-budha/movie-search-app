@@ -132,9 +132,18 @@ footer{
    border-bottom-color: aqua;
    border-radius: 50%;
    animation:loader 2s ease-in-out infinite;
-   /* transition: all 3s ease-in-out 0.2s ; */
-   /* transform: rotate(360deg); */
+   transition: all 3s ease-in-out 0.2s ; 
+    transform: rotate(360deg);
 }
+
+/* .loaderdiv {
+    width: 60px;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1s steps(4) infinite;
+  }
+  @keyframes l1 {to{clip-path: inset(0 -34% 0 0)}} */
 
 @keyframes loader{
     from{
