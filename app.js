@@ -106,6 +106,7 @@ ScrollReveal().reveal(".form", {
     distance: "20px", // Moves 50px before revealing
     delay: 200, // Delay before animation starts
   });
+  
 
   
   
